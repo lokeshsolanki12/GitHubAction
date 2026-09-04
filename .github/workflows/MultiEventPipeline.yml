@@ -8,8 +8,9 @@ on:
 
 jobs:
     on-push:
-        run-on: ubuntu-latest
+        runs-on: ubuntu-latest
         steps:
-            - name: "Running on main push"
-                run: echo "Running on main push"
-                run: echo "Lokesh Push this on Test branch"
+            - name: "Running on test push"
+              run: echo "Running on main push"
+            - name: "Print date "
+              run: date
