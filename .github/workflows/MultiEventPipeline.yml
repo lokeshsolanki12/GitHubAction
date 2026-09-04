@@ -6,7 +6,7 @@ on:
 
 
 jobs:
-    on-Push:
+    on-push:
         run-on: ubuntu-latest
         steps:
             - name: "Running on main push"
