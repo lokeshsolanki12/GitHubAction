@@ -4,6 +4,9 @@ on:
         branches:
             - main
             - test
+    pull_request:
+        branches:
+            - main
 
 
 jobs:
@@ -14,3 +17,8 @@ jobs:
               run: echo "Running on main push"
             - name: "Print date "
               run: date
+    on-pull-request:
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Running on pull request"
+              run: echo "Runing on pull request"
