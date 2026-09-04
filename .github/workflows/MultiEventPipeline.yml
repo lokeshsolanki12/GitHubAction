@@ -7,7 +7,10 @@ on:
     pull_request:
         branches:
             - main
+        types:
+            - closed
     workflow_dispatch:
+    
 
 
 jobs:
@@ -25,3 +28,17 @@ jobs:
         steps:
             - name: "Running on pull request"
               run: echo "Runing on pull request"
+
+    on-pull-request-closed:
+        if: github.event_name == 'pull_request' &&  github.event.action == 'closed'
+        runs-on: ubuntu-latest
+        steps:
+            - name: "Running on pull request closed"
+              run: echo "Running pull request closed"
+
+    on-workflow-dispatch:
+        if: github.event_name == 'workflow_dispatch'
+        runs-on: ubuntu-latest
+        steps:
+            - name: "runing on workflow dispatch"
+              run: echo "Runing on workflow dispatch"   
