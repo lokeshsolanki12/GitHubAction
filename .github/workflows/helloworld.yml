@@ -7,7 +7,7 @@ on:
       - master
 
 jobs:
-  hello:
+  First_Pipeline:
     runs-on: ubuntu-latest
     steps:
       - name: "Say Hello"
